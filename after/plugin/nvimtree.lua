@@ -8,12 +8,20 @@ require("nvim-tree").setup({
         adaptive_size = true,
         mappings = {
             list = {
-               { key = "u", action = "dir_up" },
+                { key = "u", action = "dir_up" },
             },
         },
     },
     renderer = {
         group_empty = true,
+        icons = {
+            show = {
+                file = false,
+                folder = false,
+                folder_arrow = false,
+                git = false,
+            },
+        },
     },
     filters = {
         dotfiles = true,

@@ -184,6 +184,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/yangtao23/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
     url = "https://github.com/airblade/vim-gitgutter"
+  },
+  ["vim-go"] = {
+    loaded = true,
+    path = "/Users/yangtao23/.local/share/nvim/site/pack/packer/start/vim-go",
+    url = "https://github.com/fatih/vim-go"
   }
 }
 

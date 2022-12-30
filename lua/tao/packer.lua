@@ -60,5 +60,6 @@ return require('packer').startup(function(use)
 
     -- https://github.com/voldikss/vim-floaterm
     use { 'voldikss/vim-floaterm' }
+    use { 'fatih/vim-go' }
 
 end)

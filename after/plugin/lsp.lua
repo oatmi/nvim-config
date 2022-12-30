@@ -33,4 +33,4 @@ lsp.setup()
 vim.keymap.set("n", "<leader>d", function() vim.lsp.buf.definition() end)
 vim.keymap.set("n", "<leader>r", function() vim.lsp.buf.references() end)
 
-vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
+vim.cmd [[autocmd BufWritePre *    "lua vim.lsp.buf.format()"]]

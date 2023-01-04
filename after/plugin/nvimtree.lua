@@ -16,8 +16,8 @@ require("nvim-tree").setup({
         group_empty = true,
         icons = {
             show = {
-                file = false,
-                folder = false,
+                -- file = false,
+                -- folder = false,
                 folder_arrow = false,
                 git = false,
             },

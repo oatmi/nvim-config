@@ -54,9 +54,9 @@ return require('packer').startup(function(use)
     }
 
     use { "ellisonleao/gruvbox.nvim" }
-    use('preservim/tagbar')
-    use('f-person/git-blame.nvim')
-    use('airblade/vim-gitgutter')
+    use { 'preservim/tagbar' }
+    use { 'f-person/git-blame.nvim' }
+    use { 'airblade/vim-gitgutter' }
 
     -- https://github.com/voldikss/vim-floaterm
     use { 'voldikss/vim-floaterm' }

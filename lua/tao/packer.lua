@@ -63,7 +63,13 @@ return require('packer').startup(function(use)
 
     use { "ellisonleao/gruvbox.nvim" }
     use { 'preservim/tagbar' }
-    use { 'f-person/git-blame.nvim' }
+    use ({
+        'f-person/git-blame.nvim',
+        event = "BufRead",
+        config = function()
+            vim.g.gitblame_enabled = 0
+        end,
+    })
     use { 'airblade/vim-gitgutter' }
 
     -- https://github.com/voldikss/vim-floaterm

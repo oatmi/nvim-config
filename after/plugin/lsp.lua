@@ -31,7 +31,10 @@ lsp.set_preferences({
 
 lsp.setup()
 
+
+-- https://github.com/neovim/nvim-lspconfig
 vim.keymap.set("n", "<leader>d", function() vim.lsp.buf.definition() end)
 vim.keymap.set("n", "<leader>r", function() vim.lsp.buf.references() end)
+vim.keymap.set("n", "<leader>k", function() vim.lsp.buf.hover() end)
 
 vim.cmd [[autocmd BufWritePre *    "lua vim.lsp.buf.format()"]]

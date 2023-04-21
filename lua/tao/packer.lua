@@ -21,13 +21,15 @@ return require('packer').startup(function(use)
     --     end
     -- })
 
-    use({
-        'morhetz/gruvbox',
-        as = 'gruvbox',
-        config = function()
-            vim.cmd('colorscheme gruvbox')
-        end
-    })
+    -- use({
+    --     'morhetz/gruvbox',
+    --     as = 'gruvbox',
+    --     config = function()
+    --         vim.cmd('colorscheme gruvbox')
+    --     end
+    -- })
+
+    use "rebelot/kanagawa.nvim"
 
     -- https://github.com/nvim-tree/nvim-tree.lua
     use {

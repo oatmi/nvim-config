@@ -13,23 +13,11 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
-    -- use({
-    --     'rose-pine/neovim',
-    --     as = 'rose-pine',
-    --     config = function()
-    --         vim.cmd('colorscheme rose-pine')
-    --     end
-    -- })
+    -- https://github.com/rebelot/kanagawa.nvim
+    use { "rebelot/kanagawa.nvim" }
 
-    -- use({
-    --     'morhetz/gruvbox',
-    --     as = 'gruvbox',
-    --     config = function()
-    --         vim.cmd('colorscheme gruvbox')
-    --     end
-    -- })
-
-    use "rebelot/kanagawa.nvim"
+    -- https://github.com/nvim-treesitter/nvim-treesitter
+    use { "nvim-treesitter/nvim-treesitter" }
 
     -- https://github.com/nvim-tree/nvim-tree.lua
     use {

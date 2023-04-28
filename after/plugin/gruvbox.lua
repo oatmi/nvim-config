@@ -31,7 +31,7 @@
 require('kanagawa').setup({
     compile = false,             -- enable compiling the colorscheme
     undercurl = true,            -- enable undercurls
-    commentStyle = { italic = true },
+    commentStyle = { italic = false },
     functionStyle = {},
     keywordStyle = { italic = true},
     statementStyle = { bold = true },

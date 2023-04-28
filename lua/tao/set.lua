@@ -16,3 +16,9 @@ vim.opt.sidescroll  = 1
 vim.opt.linebreak   = true
 vim.opt.colorcolumn = "161"
 vim.wo.wrap         = false
+vim.opt.nu          = true
+
+
+-- float_term
+vim.g.floaterm_width  = 0.8
+vim.g.floaterm_height = 0.8

@@ -60,10 +60,16 @@ return require('packer').startup(function(use)
             vim.g.gitblame_enabled = 0
         end,
     })
-    use { 'airblade/vim-gitgutter' }
 
     -- https://github.com/voldikss/vim-floaterm
     use { 'voldikss/vim-floaterm' }
     use { 'fatih/vim-go' }
 
+    -- https://github.com/lewis6991/gitsigns.nvim
+    use {
+        'lewis6991/gitsigns.nvim',
+        config = function()
+            require('gitsigns').setup()
+        end
+    }
 end)

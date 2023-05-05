@@ -11,7 +11,4 @@ vim.cmd([[inoreabbrev icmt // Copyright(C) 2023 Baidu Inc. All Rights Reserved.<
             \// Author  tao (yangtao23@baidu.com)<CR>
             \// Date    <c-r>=strftime("%Y/%m/%d %H:%M:%S")<CR>]])
 
-vim.cmd[[hi Normal guibg=NONE ctermbg=NONE]]
-
--- git diff tool
 -- https://github.com/banga/git-split-diffs

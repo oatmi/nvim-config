@@ -14,7 +14,7 @@ vim.opt.ttyfast     = true
 vim.opt.cursorline  = true
 vim.opt.sidescroll  = 1
 vim.opt.linebreak   = true
-vim.opt.colorcolumn = "161"
+-- vim.opt.colorcolumn = "161"
 vim.wo.wrap         = false
 vim.opt.nu          = true
 

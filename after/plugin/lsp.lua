@@ -28,6 +28,11 @@ lsp.preset('recommended')
 lsp.set_preferences({
     sign_icons = {}
 })
+lsp.ensure_installed({
+  -- Replace these with whatever servers you want to install
+  'rust_analyzer',
+  'gopls'
+})
 
 lsp.setup()
 

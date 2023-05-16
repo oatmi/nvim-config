@@ -16,8 +16,8 @@ vim.opt.sidescroll  = 1
 vim.opt.linebreak   = true
 -- vim.opt.colorcolumn = "161"
 vim.wo.wrap         = false
+vim.opt.rnu         = true
 vim.opt.nu          = true
-vim.opt.mousemoveevent = true
 
 
 -- float_term

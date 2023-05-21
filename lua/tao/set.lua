@@ -5,7 +5,7 @@ vim.opt.shiftwidth  = 4
 vim.opt.softtabstop = 4
 vim.opt.hlsearch    = true
 vim.opt.smartcase   = true
-vim.opt.mouse       = v
+vim.opt.mouse       = "v"
 vim.opt.autoindent  = true
 vim.opt.foldlevel   = 5
 vim.opt.scrolloff   = 7
@@ -18,7 +18,7 @@ vim.opt.linebreak   = true
 vim.wo.wrap         = false
 vim.opt.rnu         = true
 vim.opt.nu          = true
-
+vim.opt.filetype    = "on"
 
 -- float_term
 vim.g.floaterm_width  = 0.8

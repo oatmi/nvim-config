@@ -7,7 +7,9 @@ lsp.set_preferences({
 lsp.ensure_installed({
   -- Replace these with whatever servers you want to install
   'rust_analyzer',
-  'gopls'
+  'gopls',
+  'tsserver',
+  'eslint',
 })
 
 lsp.setup()
@@ -35,6 +37,16 @@ require'lspconfig'.lua_ls.setup {
     },
 }
 
+require('lspconfig')['tsserver'].setup{
+    settings = {
+        javascript = {
+            diagnostics = {
+                -- Get the language server to recognize the `vim` global
+                globals = {'react'},
+            },
+        },
+    },
+}
 
 -- https://github.com/neovim/nvim-lspconfig
 vim.keymap.set("n", "<leader>d", function() vim.lsp.buf.definition() end)

@@ -19,6 +19,7 @@ vim.wo.wrap         = false
 vim.opt.rnu         = true
 vim.opt.nu          = true
 vim.opt.filetype    = "on"
+vim.opt.clipboard   = "unnamedplus"
 
 -- float_term
 vim.g.floaterm_width  = 0.8

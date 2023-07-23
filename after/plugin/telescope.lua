@@ -6,6 +6,7 @@ require('telescope').setup({
     defaults = {
         layout_strategy = 'vertical',
         color_devicons = false,
+        borderchars = { '─', '│', '─', '│', '╭', '╮', '╯', '╰' },
         layout_config = {
             vertical = {
                 width = 0.8,
@@ -20,11 +21,22 @@ require('telescope').setup({
 })
 
 
-vim.keymap.set('n', '<C-p>', builtin.find_files, {})
-vim.keymap.set('n', '<leader>f', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>p', function ()
+    -- https://github.com/nvim-telescope/telescope.nvim/issues/946#issuecomment-872405867
+    return builtin.find_files({disable_devicons = true})
+end, {})
 
-vim.keymap.set('n', '<leader>a', function() 
-    return builtin.grep_string({ search = vim.fn.expand("<cword>") })
+vim.keymap.set('n', '<leader>f', function()
+    return builtin.live_grep({
+        disable_devicons = true
+    })
+end, {})
+
+vim.keymap.set('n', '<leader>a', function()
+    return builtin.grep_string({
+        search = vim.fn.expand("<cword>"),
+        disable_devicons = true
+    })
 end, {})
 
 -- vim.keymap.set('n', '<leader>f', builtin.grep_string({search = "hi"}), { search = vim.fn.expand("<cword>") })

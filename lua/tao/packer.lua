@@ -22,9 +22,9 @@ return require('packer').startup(function(use)
     -- https://github.com/nvim-tree/nvim-tree.lua
     use {
         'nvim-tree/nvim-tree.lua',
-        requires = {
-            'nvim-tree/nvim-web-devicons', -- optional, for file icons
-        },
+        -- requires = {
+        --     'nvim-tree/nvim-web-devicons', -- optional, for file icons
+        -- },
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
 
@@ -75,14 +75,14 @@ return require('packer').startup(function(use)
 
     use {
         'akinsho/bufferline.nvim', tag = "*",
-        requires = {
-            'nvim-tree/nvim-web-devicons'
-        }
+        -- requires = {
+        --     'nvim-tree/nvim-web-devicons'
+        -- }
     }
 
     use { "catppuccin/nvim", as = "catppuccin" }
-   use {
-       'nvim-lualine/lualine.nvim',
-       requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-   }
+    use {
+        'nvim-lualine/lualine.nvim',
+        -- requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
 end)

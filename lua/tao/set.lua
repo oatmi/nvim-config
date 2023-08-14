@@ -14,7 +14,7 @@ vim.opt.ttyfast     = true
 vim.opt.cursorline  = true
 vim.opt.sidescroll  = 1
 vim.opt.linebreak   = true
--- vim.opt.colorcolumn = "161"
+vim.opt.colorcolumn = "161"
 vim.wo.wrap         = false
 vim.opt.rnu         = true
 vim.opt.nu          = true
@@ -24,7 +24,10 @@ vim.opt.clipboard   = "unnamedplus"
 -- float_term
 vim.g.floaterm_width  = 0.8
 vim.g.floaterm_height = 0.8
--- vim.g.floaterm_borderchars = '─│─│┌┐┘└'
 vim.g.floaterm_borderchars = '─│─│╭╮╯╰'
 
-vim.cmd[[hi Normal guibg=NONE ctermbg=NONE]]
+
+-- https://github.com/folke/tokyonight.nvim
+vim.cmd[[colorscheme tokyonight-day]]
+
+-- vim.cmd[[hi Normal guibg=NONE ctermbg=NONE]]

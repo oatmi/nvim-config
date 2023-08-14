@@ -1,8 +1,9 @@
 require('lualine').setup {
     options = {
+        theme = 'auto',
+        -- theme = 'tokyonight',
         icons_enabled = false,
         show_filename_only = false,
-        theme = 'auto',
         component_separators = { left = '', right = ''},
         section_separators = { left = '', right = ''},
         -- component_separators = { left = '', right = ''},

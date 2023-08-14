@@ -55,8 +55,4 @@ require('kanagawa').setup({
 
 -- setup must be called before loading
 -- vim.cmd("colorscheme kanagawa")
-
--- https://github.com/folke/tokyonight.nvim
-vim.cmd("colorscheme tokyonight-day")
-
 -- vim.cmd([[hi Normal guibg=NONE ctermbg=NONE]])

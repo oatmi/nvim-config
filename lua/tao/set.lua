@@ -26,7 +26,6 @@ vim.g.floaterm_width        = 0.7
 vim.g.floaterm_height       = 0.8
 vim.g.floaterm_borderchars  = '─│─│╭╮╯╰'
 
-
 -- https://github.com/folke/tokyonight.nvim
 vim.cmd[[colorscheme tokyonight-day]]
 

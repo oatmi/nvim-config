@@ -92,4 +92,6 @@ return require('packer').startup(function(use)
         priority = 1000,
         opts = {},
     }
+
+    use {'Mofiqul/vscode.nvim'}
 end)

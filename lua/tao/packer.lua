@@ -94,4 +94,6 @@ return require('packer').startup(function(use)
     }
 
     use {'Mofiqul/vscode.nvim'}
+
+    use {"nvim-treesitter/nvim-treesitter-context"}
 end)

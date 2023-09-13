@@ -23,19 +23,24 @@ require('telescope').setup({
 
 vim.keymap.set('n', '<leader>p', function ()
     -- https://github.com/nvim-telescope/telescope.nvim/issues/946#issuecomment-872405867
-    return builtin.find_files({disable_devicons = true})
+    return builtin.find_files({
+        disable_devicons     = true,
+        file_ignore_patterns = { "%.css", "%.js" },
+    })
 end, {})
 
 vim.keymap.set('n', '<leader>f', function()
     return builtin.live_grep({
-        disable_devicons = true
+        disable_devicons     = true,
+        file_ignore_patterns = { "%.css", "%.js" },
     })
 end, {})
 
 vim.keymap.set('n', '<leader>a', function()
     return builtin.grep_string({
         search = vim.fn.expand("<cword>"),
-        disable_devicons = true
+        disable_devicons     = true,
+        file_ignore_patterns = { "%.css", "%.js" },
     })
 end, {})
 

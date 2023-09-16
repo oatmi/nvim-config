@@ -5,8 +5,9 @@ require('neorg').setup {
         ["core.dirman"] = { -- Manages Neorg workspaces
             config = {
                 workspaces = {
-                    work = "~/notes/work",
                     home = "~/notes/home",
+                    journal = "~/notes/home/journal",
+                    work = "~/notes/home/work",
                 },
             },
         },

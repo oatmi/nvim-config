@@ -96,4 +96,11 @@ return require('packer').startup(function(use)
     use {'Mofiqul/vscode.nvim'}
 
     use {"nvim-treesitter/nvim-treesitter-context"}
+
+    use {
+        "nvim-neorg/neorg",
+        requires = {
+            "nvim-lua/plenary.nvim"
+        }
+    }
 end)

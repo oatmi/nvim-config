@@ -103,4 +103,6 @@ return require('packer').startup(function(use)
             "nvim-lua/plenary.nvim"
         }
     }
+
+    use { "kylechui/nvim-surround" }
 end)

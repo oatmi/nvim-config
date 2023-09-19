@@ -9,8 +9,8 @@ require("nvim-tree").setup({
             enable = true,
             quit_on_focus_loss = true,
             open_win_config = {
-                -- relative = "editor",
-                relative = "cursor",
+                relative = "editor",
+                -- relative = "cursor",
                 -- width = 30,
                 -- height = 30,
                 row = 1,

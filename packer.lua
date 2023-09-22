@@ -105,4 +105,5 @@ return require('packer').startup(function(use)
     }
 
     use { "kylechui/nvim-surround" }
+    use { "ggandor/leap.nvim" }
 end)

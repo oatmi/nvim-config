@@ -1,8 +1,16 @@
 require('neorg').setup {
     load = {
         ["core.defaults"]  = {}, -- Loads default behaviour
-        ["core.mode"]      = {}, -- Loads default behaviour
+        ["core.mode"]      = {},
+        ["core.summary"]   = {},
         ["core.concealer"] = {}, -- Adds pretty icons to your documents
+
+        ["core.journal"] = {
+            config = {
+                strategy = "flat",
+                toc_format = { "yy", "mm", "dd" },
+            },
+        },
 
         -- https://github.com/nvim-neorg/neorg/wiki/User-Keybinds
         ["core.keybinds"] = {

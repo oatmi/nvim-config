@@ -56,3 +56,6 @@ vim.g.floaterm_borderchars  = '─│─│╭╮╯╰'
 -- vim.cmd[[colorscheme tokyonight-night]]
 
 -- vim.cmd[[hi Normal guibg=NONE ctermbg=NONE]]
+
+vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', '/', '<cmd>FineCmdline /<CR>', {noremap = true})

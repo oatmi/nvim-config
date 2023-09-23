@@ -109,4 +109,12 @@ return require('packer').startup(function(use)
 
     -- https://github.com/folke/zen-mode.nvim
     use { "folke/zen-mode.nvim" }
+
+    -- https://github.com/vonheikemen/fine-cmdline.nvim
+    use {
+        'VonHeikemen/fine-cmdline.nvim',
+        requires = {
+            {'MunifTanjim/nui.nvim'}
+        }
+    }
 end)

@@ -56,12 +56,3 @@ vim.g.floaterm_borderchars  = '─│─│╭╮╯╰'
 -- vim.cmd[[colorscheme tokyonight-night]]
 
 -- vim.cmd[[hi Normal guibg=NONE ctermbg=NONE]]
-
--- cmdline config
-vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
-vim.api.nvim_set_keymap('n', '/', '<cmd>FineCmdline /<CR>', {noremap = true})
--- cmdline config end
-
-vim.keymap.set("n", "<leader>s",  '<Plug>(leap-forward-to)')
-vim.keymap.set("n", "<leader>gs", '<Plug>(leap-from-window)')
-vim.keymap.set("n", "<leader>S",  '<Plug>(leap-backward-to)')

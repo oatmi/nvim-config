@@ -106,4 +106,7 @@ return require('packer').startup(function(use)
 
     use { "kylechui/nvim-surround" }
     use { "ggandor/leap.nvim" }
+
+    -- https://github.com/folke/zen-mode.nvim
+    use { "folke/zen-mode.nvim" }
 end)

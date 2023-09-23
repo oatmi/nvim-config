@@ -57,5 +57,19 @@ vim.g.floaterm_borderchars  = '─│─│╭╮╯╰'
 
 -- vim.cmd[[hi Normal guibg=NONE ctermbg=NONE]]
 
+-- cmdline config
 vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '/', '<cmd>FineCmdline /<CR>', {noremap = true})
+-- cmdline config end
+
+-- leap config
+--
+-- leap 插件占用了这俩key，取消掉，使用
+-- leader + s/S 代替
+vim.cmd('unmap s')
+vim.cmd('unmap S')
+
+vim.keymap.set("n", "<leader>s",  '<Plug>(leap-forward-to)')
+vim.keymap.set("n", "<leader>gs", '<Plug>(leap-from-window)')
+vim.keymap.set("n", "<leader>S",  '<Plug>(leap-backward-to)')
+-- leap config end

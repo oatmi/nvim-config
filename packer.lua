@@ -14,7 +14,7 @@ return require('packer').startup(function(use)
     }
 
     -- https://github.com/rebelot/kanagawa.nvim
-    use { "rebelot/kanagawa.nvim" }
+    -- use { "rebelot/kanagawa.nvim" }
 
     -- https://github.com/nvim-treesitter/nvim-treesitter
     use { "nvim-treesitter/nvim-treesitter" }
@@ -93,7 +93,7 @@ return require('packer').startup(function(use)
         opts = {},
     }
 
-    use {'Mofiqul/vscode.nvim'}
+    -- use {'Mofiqul/vscode.nvim'}
 
     use {"nvim-treesitter/nvim-treesitter-context"}
 
@@ -104,11 +104,8 @@ return require('packer').startup(function(use)
         }
     }
 
-    use { "kylechui/nvim-surround" }
+    -- use { "kylechui/nvim-surround" }
     use { "ggandor/leap.nvim" }
-
-    -- https://github.com/folke/zen-mode.nvim
-    use { "folke/zen-mode.nvim" }
 
     -- https://github.com/vonheikemen/fine-cmdline.nvim
     -- use {

@@ -7,7 +7,7 @@ require("gruvbox").setup({
     bold = true,
     italic = {
        strings = true,
-       operators = true,
+       operators = false,
        comments = false,
     },
     strikethrough = true,

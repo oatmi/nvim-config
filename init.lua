@@ -1,5 +1,5 @@
 -- https://github.com/ellisonleao/gruvbox.nvim
--- vim.o.background = "dark" -- "dark" or "light" for light mode
+vim.o.background = "dark" -- "dark" or "light" for light mode
 
 vim.cmd('abb idbg fmt.Printf(\"debug: %+v\\n\",')
 vim.cmd('abb iuid 3779255524')
@@ -53,6 +53,7 @@ vim.g.floaterm_height       = 0.8
 vim.g.floaterm_borderchars  = '─│─│╭╮╯╰'
 
 -- https://github.com/folke/tokyonight.nvim
--- vim.cmd[[colorscheme tokyonight-night]]
+vim.cmd[[colorscheme tokyonight-moon]]
+-- vim.cmd("colorscheme gruvbox")
 
 -- vim.cmd[[hi Normal guibg=NONE ctermbg=NONE]]

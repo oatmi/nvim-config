@@ -138,11 +138,6 @@ _G.packer_plugins = {
     path = "/Users/yangtao/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
     url = "https://github.com/ellisonleao/gruvbox.nvim"
   },
-  ["kanagawa.nvim"] = {
-    loaded = true,
-    path = "/Users/yangtao/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
-    url = "https://github.com/rebelot/kanagawa.nvim"
-  },
   ["leap.nvim"] = {
     loaded = true,
     path = "/Users/yangtao/.local/share/nvim/site/pack/packer/start/leap.nvim",
@@ -182,11 +177,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/yangtao/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
-  },
-  ["nvim-surround"] = {
-    loaded = true,
-    path = "/Users/yangtao/.local/share/nvim/site/pack/packer/start/nvim-surround",
-    url = "https://github.com/kylechui/nvim-surround"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -237,16 +227,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/yangtao/.local/share/nvim/site/pack/packer/start/vim-go",
     url = "https://github.com/fatih/vim-go"
-  },
-  ["vscode.nvim"] = {
-    loaded = true,
-    path = "/Users/yangtao/.local/share/nvim/site/pack/packer/start/vscode.nvim",
-    url = "https://github.com/Mofiqul/vscode.nvim"
-  },
-  ["zen-mode.nvim"] = {
-    loaded = true,
-    path = "/Users/yangtao/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
-    url = "https://github.com/folke/zen-mode.nvim"
   }
 }
 

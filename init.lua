@@ -53,7 +53,7 @@ vim.g.floaterm_height       = 0.8
 vim.g.floaterm_borderchars  = '─│─│╭╮╯╰'
 
 -- https://github.com/folke/tokyonight.nvim
-vim.cmd[[colorscheme tokyonight-day]]
+vim.cmd[[colorscheme tokyonight-moon]]
 -- vim.cmd("colorscheme gruvbox")
 
 vim.cmd[[hi Normal guibg=NONE ctermbg=NONE]]

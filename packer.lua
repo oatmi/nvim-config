@@ -97,12 +97,12 @@ return require('packer').startup(function(use)
 
     use {"nvim-treesitter/nvim-treesitter-context"}
 
-    use {
-        "nvim-neorg/neorg",
-        requires = {
-            "nvim-lua/plenary.nvim"
-        }
-    }
+    -- use {
+    --     "nvim-neorg/neorg",
+    --     requires = {
+    --         "nvim-lua/plenary.nvim"
+    --     }
+    -- }
 
     -- use { "kylechui/nvim-surround" }
     use { "ggandor/leap.nvim" }

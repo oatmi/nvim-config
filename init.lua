@@ -56,4 +56,4 @@ vim.g.floaterm_borderchars  = '─│─│╭╮╯╰'
 vim.cmd[[colorscheme tokyonight-moon]]
 -- vim.cmd("colorscheme gruvbox")
 
--- vim.cmd[[hi Normal guibg=NONE ctermbg=NONE]]
+vim.cmd[[hi Normal guibg=NONE ctermbg=NONE]]

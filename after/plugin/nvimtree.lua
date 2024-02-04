@@ -6,7 +6,7 @@ require("nvim-tree").setup({
     sort_by = "case_sensitive",
     view = {
         float = {
-            enable = true,
+            enable = false,
             quit_on_focus_loss = true,
             open_win_config = {
                 relative = "editor",

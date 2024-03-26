@@ -30,7 +30,8 @@ return require('packer').startup(function(use)
 
     -- https://github.com/VonHeikemen/lsp-zero.nvim
     use {
-        'VonHeikemen/lsp-zero.nvim',
+        'VonHeikemen/lsp-zero.nvim', branch = 'v3.x',
+
         requires = {
             -- LSP Support
             { 'neovim/nvim-lspconfig' },
@@ -51,7 +52,6 @@ return require('packer').startup(function(use)
         }
     }
 
-    use { "ellisonleao/gruvbox.nvim" }
     use { 'preservim/tagbar' }
     use ({
         'f-person/git-blame.nvim',
@@ -80,7 +80,6 @@ return require('packer').startup(function(use)
         -- }
     }
 
-    use { "catppuccin/nvim", as = "catppuccin" }
     use {
         'nvim-lualine/lualine.nvim',
         -- requires = { 'nvim-tree/nvim-web-devicons', opt = true }

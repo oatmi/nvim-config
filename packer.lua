@@ -92,6 +92,8 @@ return require('packer').startup(function(use)
         opts = {},
     }
 
+    use { "EdenEast/nightfox.nvim" }
+
     -- use {'Mofiqul/vscode.nvim'}
 
     use {"nvim-treesitter/nvim-treesitter-context"}

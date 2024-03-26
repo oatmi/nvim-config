@@ -2,6 +2,7 @@
 vim.o.background = "dark" -- "dark" or "light" for light mode
 
 vim.cmd('abb idbg fmt.Printf(\"debug: %+v\\n\",')
+vim.cmd('abb ierr if err != nil {')
 vim.cmd('abb iuid 3779255524')
 vim.cmd([[inoreabbrev itime <c-r>=strftime("%Y/%m/%d %H:%M:%S")<CR>]])
 vim.cmd([[inoreabbrev idate <c-r>=strftime("%Y_%m_%d")<CR>]])
@@ -57,5 +58,6 @@ vim.g.floaterm_borderchars  = '─│─│╭╮╯╰'
 -- colorscheme tokyonight-storm
 -- colorscheme tokyonight-day
 -- colorscheme tokyonight-moon
-vim.cmd[[colorscheme tokyonight-storm]]
+-- vim.cmd[[colorscheme tokyonight-storm]]
+vim.cmd[[colorscheme nordfox]]
 -- vim.cmd[[hi Normal guibg=NONE ctermbg=NONE]]

@@ -15,7 +15,7 @@ require('mason-lspconfig').setup({
 
 
 -- require('lspconfig').tsserver.setup({})
--- require('lspconfig').rust_analyzer.setup({})
+require('lspconfig').rust_analyzer.setup({})
 require('lspconfig').gopls.setup({})
 
 local cmp = require('cmp')

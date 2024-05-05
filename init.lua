@@ -1,3 +1,54 @@
+---------------------------------- lazy start ------------------------------------
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+
+require("lazy").setup({
+    {
+        'nvim-telescope/telescope.nvim', tag = '0.1.6',
+        dependencies = { 'nvim-lua/plenary.nvim' }
+    },
+    { "nvim-treesitter/nvim-treesitter" },
+    { 'nvim-tree/nvim-tree.lua' },
+
+    --- Uncomment the two plugins below if you want to manage the language servers from neovim
+    {'williamboman/mason.nvim'},
+    {'williamboman/mason-lspconfig.nvim'},
+
+    {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
+    {'neovim/nvim-lspconfig'},
+    {'hrsh7th/cmp-nvim-lsp'},
+    {'hrsh7th/nvim-cmp'},
+    {'L3MON4D3/LuaSnip'},
+    { 'preservim/tagbar' },
+    { 'f-person/git-blame.nvim' },
+
+    -- https://github.com/voldikss/vim-floaterm
+    { 'voldikss/vim-floaterm' },
+    { 'fatih/vim-go' },
+
+    -- https://github.com/lewis6991/gitsigns.nvim
+    {'lewis6991/gitsigns.nvim' },
+    {'akinsho/bufferline.nvim' },
+    {'nvim-lualine/lualine.nvim'},
+    {"EdenEast/nightfox.nvim" },
+    {"nvim-treesitter/nvim-treesitter-context"},
+})
+
+---------------------------------- lazy end ------------------------------------
+
 -- https://github.com/ellisonleao/gruvbox.nvim
 vim.o.background = "dark" -- "dark" or "light" for light mode
 
@@ -12,8 +63,6 @@ vim.cmd([[inoreabbrev icmt // Copyright(C) 2023 Baidu Inc. All Rights Reserved.<
             \// Date    <c-r>=strftime("%Y/%m/%d %H:%M:%S")<CR>]])
 
 -- https://github.com/banga/git-split-diffs
-
-vim.g.mapleader = " "
 
 vim.keymap.set("n", "<leader>w", ':w<CR>')
 vim.keymap.set("n", "<leader>q", ':q<CR>')

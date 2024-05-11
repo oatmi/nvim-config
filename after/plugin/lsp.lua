@@ -42,12 +42,3 @@ cmp.setup({
     ['<C-d>'] = cmp.mapping.scroll_docs(4),
   })
 })
-
-vim = vim
-
-vim.keymap.set("n", "<leader>d", function() vim.lsp.buf.definition() end)
-vim.keymap.set("n", "<leader>r", function() vim.lsp.buf.references() end)
-vim.keymap.set("n", "<leader>k", function() vim.lsp.buf.hover() end)
-vim.api.nvim_set_keymap('n', '<leader>dp', '<cmd>lua vim.diagnostic.goto_prev()<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>dn', '<cmd>lua vim.diagnostic.goto_next()<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>dd', '<cmd>Telescope diagnostics<CR>', { noremap = true, silent = true })

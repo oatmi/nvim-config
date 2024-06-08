@@ -109,7 +109,9 @@ vim.g.floaterm_borderchars  = '─│─│╭╮╯╰'
 -- colorscheme tokyonight-moon
 -- vim.cmd[[colorscheme tokyonight-storm]]
 vim.cmd[[colorscheme nordfox]]
--- vim.cmd[[hi Normal guibg=NONE ctermbg=NONE]]
+vim.cmd[[hi Normal guibg=NONE ctermbg=NONE]]
+vim.cmd[[hi NvimTreeNormal guibg=NONE ctermbg=NONE]] -- for nvimtree transparant
+-- vim.cmd[[hi Normal guibg=NONE]]
 
 ------------------------------ lsp ----------------------------
 vim.keymap.set("n", "<leader>d", function() vim.lsp.buf.definition() end)
@@ -118,3 +120,18 @@ vim.keymap.set("n", "<leader>k", function() vim.lsp.buf.hover() end)
 vim.api.nvim_set_keymap('n', '<leader>dp', '<cmd>lua vim.diagnostic.goto_prev()<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>dn', '<cmd>lua vim.diagnostic.goto_next()<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>dd', '<cmd>Telescope diagnostics<CR>', { noremap = true, silent = true })
+
+
+-- https://stackoverflow.com/questions/77466697/how-to-automatically-format-on-save
+vim.api.nvim_create_augroup("AutoFormat", {})
+vim.api.nvim_create_autocmd(
+    "BufWritePost",
+    {
+        pattern = "*.py",
+        group = "AutoFormat",
+        callback = function()
+            vim.cmd("silent !black --quiet %")
+            vim.cmd("edit")
+        end,
+    }
+)

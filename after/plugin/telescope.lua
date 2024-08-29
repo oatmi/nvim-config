@@ -4,16 +4,19 @@ local builtin = require('telescope.builtin')
 
 require('telescope').setup({
     defaults = {
-        layout_strategy = 'vertical',
-        color_devicons = false,
+        layout_strategy = 'horizontal',
+        -- layout_config = { width = 0.2 },
+        color_devicons = true,
         borderchars = { '─', '│', '─', '│', '╭', '╮', '╯', '╰' },
         layout_config = {
-            vertical = {
-                width = 0.8,
-                height = 0.8,
-                prompt_position = "bottom"
-            }
-            -- other layout configuration here
+            prompt_position = "bottom",
+            preview_width = 0.6,
+        --     vertical = {
+        --         width = 0.8,
+        --         height = 0.8,
+        --         prompt_position = "top"
+        --     }
+        --     -- other layout configuration here
         },
         -- other defaults configuration here
     },

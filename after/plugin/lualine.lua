@@ -5,9 +5,10 @@ require('lualine').setup {
         icons_enabled = true,
         show_filename_only = false,
         component_separators = { left = '', right = ''},
-        section_separators = { left = '', right = ''},
+        -- section_separators = { left = '', right = ''},
         -- component_separators = { left = '', right = ''},
         -- section_separators = { left = '', right = ''},
+        section_separators = { left = '', right = '' },
         -- section_separators = { left = '', right = '' },
         -- component_separators = { left = '', right = '' },
         disabled_filetypes = {

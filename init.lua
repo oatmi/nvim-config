@@ -21,7 +21,12 @@ require("lazy").setup({
         dependencies = { 'nvim-lua/plenary.nvim' }
     },
     { "nvim-treesitter/nvim-treesitter" },
-    { 'nvim-tree/nvim-tree.lua' },
+    {
+        'nvim-tree/nvim-tree.lua',
+        dependencies = {
+            "nvim-tree/nvim-web-devicons",
+        },
+    },
 
     --- Uncomment the two plugins below if you want to manage the language servers from neovim
     {'williamboman/mason.nvim'},
@@ -108,7 +113,7 @@ vim.g.floaterm_borderchars  = '─│─│╭╮╯╰'
 -- colorscheme tokyonight-day
 -- colorscheme tokyonight-moon
 -- vim.cmd[[colorscheme tokyonight-storm]]
-vim.cmd[[colorscheme nordfox]]
+vim.cmd[[colorscheme nightfox]]
 vim.cmd[[hi Normal guibg=NONE ctermbg=NONE]]
 vim.cmd[[hi NvimTreeNormal guibg=NONE ctermbg=NONE]] -- for nvimtree transparant
 -- vim.cmd[[hi Normal guibg=NONE]]

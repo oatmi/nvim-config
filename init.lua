@@ -50,6 +50,13 @@ require("lazy").setup({
     {'nvim-lualine/lualine.nvim'},
     {"EdenEast/nightfox.nvim" },
     {"nvim-treesitter/nvim-treesitter-context"},
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
+        ---@module "ibl"
+        ---@type ibl.config
+        opts = {},
+    }
 })
 
 ---------------------------------- lazy end ------------------------------------

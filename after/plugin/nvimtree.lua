@@ -24,6 +24,12 @@ require("nvim-tree").setup({
     },
     renderer = {
         group_empty = true,
+        indent_width = 2,
+        highlight_opened_files = "icon",
+        indent_markers = {
+            enable = true,
+            inline_arrows = true,
+        },
         icons = {
             -- show = {
             --     file = false,
@@ -49,7 +55,7 @@ require("nvim-tree").setup({
         },
     },
     filters = {
-        dotfiles = true,
+        dotfiles = false,
     },
 })
 

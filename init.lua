@@ -27,6 +27,22 @@ require("lazy").setup({
             "nvim-tree/nvim-web-devicons",
         },
     },
+    -- {
+    --     "nvim-neo-tree/neo-tree.nvim",
+    --     branch = "v3.x",
+    --     dependencies = {
+    --         "nvim-lua/plenary.nvim",
+    --         "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+    --         "MunifTanjim/nui.nvim",
+    --         -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+    --     }
+    -- },
+    {
+        "folke/tokyonight.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {},
+    },
 
     --- Uncomment the two plugins below if you want to manage the language servers from neovim
     {'williamboman/mason.nvim'},
@@ -115,14 +131,15 @@ vim.g.floaterm_height       = 0.8
 vim.g.floaterm_borderchars  = '─│─│╭╮╯╰'
 
 -- https://github.com/folke/tokyonight.nvim
--- colorscheme tokyonight-night
--- colorscheme tokyonight-storm
--- colorscheme tokyonight-day
+vim.cmd[[colorscheme tokyonight-night]]
+-- vim.cmd[[colorscheme tokyonight-storm]]
+-- vim.cmd[[colorscheme tokyonight-moon]]
+-- vim.cmd[[colorscheme tokyonight-day]]
 -- colorscheme tokyonight-moon
 -- vim.cmd[[colorscheme tokyonight-storm]]
-vim.cmd[[colorscheme nightfox]]
-vim.cmd[[hi Normal guibg=NONE ctermbg=NONE]]
-vim.cmd[[hi NvimTreeNormal guibg=NONE ctermbg=NONE]] -- for nvimtree transparant
+-- vim.cmd[[colorscheme nightfox]]
+-- vim.cmd[[hi Normal guibg=NONE ctermbg=NONE]]
+-- vim.cmd[[hi NvimTreeNormal guibg=NONE ctermbg=NONE]] -- for nvimtree transparant
 -- vim.cmd[[hi Normal guibg=NONE]]
 
 ------------------------------ lsp ----------------------------

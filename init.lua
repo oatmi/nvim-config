@@ -27,16 +27,6 @@ require("lazy").setup({
             "nvim-tree/nvim-web-devicons",
         },
     },
-    -- {
-    --     "nvim-neo-tree/neo-tree.nvim",
-    --     branch = "v3.x",
-    --     dependencies = {
-    --         "nvim-lua/plenary.nvim",
-    --         "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-    --         "MunifTanjim/nui.nvim",
-    --         -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
-    --     }
-    -- },
     {
         "folke/tokyonight.nvim",
         lazy = false,
@@ -62,7 +52,7 @@ require("lazy").setup({
 
     -- https://github.com/lewis6991/gitsigns.nvim
     {'lewis6991/gitsigns.nvim' },
-    {'akinsho/bufferline.nvim' },
+    {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
     {'nvim-lualine/lualine.nvim'},
     {"EdenEast/nightfox.nvim" },
     {"nvim-treesitter/nvim-treesitter-context"},
@@ -101,29 +91,30 @@ vim.keymap.set('n', '<leader>l', '<C-w>l')
 vim.keymap.set('n', '<leader>n', 'gt')
 vim.keymap.set('n', '<leader>N', 'gT')
 
-vim.opt.guicursor    = ""
-vim.opt.expandtab    = true
-vim.opt.tabstop      = 4
-vim.opt.shiftwidth   = 4
-vim.opt.softtabstop  = 4
-vim.opt.hlsearch     = true
-vim.opt.smartcase    = true
-vim.opt.mouse        = "v"
-vim.opt.autoindent   = true
-vim.opt.foldlevel    = 5
-vim.opt.scrolloff    = 10
-vim.opt.lazyredraw   = true
-vim.opt.ttyfast      = true
-vim.opt.cursorline   = true
-vim.opt.sidescroll   = 1
-vim.opt.linebreak    = true
-vim.opt.colorcolumn  = "161"
-vim.wo.wrap          = false
-vim.opt.rnu          = false
-vim.opt.nu           = true
-vim.opt.filetype     = "on"
-vim.opt.clipboard    = "unnamedplus"
-vim.opt.conceallevel = 2
+vim.opt.guicursor     = ""
+vim.opt.expandtab     = true
+vim.opt.tabstop       = 4
+vim.opt.shiftwidth    = 4
+vim.opt.softtabstop   = 4
+vim.opt.hlsearch      = true
+vim.opt.smartcase     = true
+vim.opt.mouse         = "v"
+vim.opt.autoindent    = true
+vim.opt.foldlevel     = 5
+vim.opt.scrolloff     = 10
+vim.opt.lazyredraw    = true
+vim.opt.ttyfast       = true
+vim.opt.cursorline    = true
+vim.opt.sidescroll    = 1
+vim.opt.linebreak     = true
+vim.opt.colorcolumn   = "161"
+vim.wo.wrap           = false
+vim.opt.rnu           = false
+vim.opt.nu            = true
+vim.opt.filetype      = "on"
+vim.opt.clipboard     = "unnamedplus"
+vim.opt.conceallevel  = 2
+vim.opt.termguicolors = true
 
 -- float_term
 vim.g.floaterm_width        = 0.7
@@ -131,10 +122,10 @@ vim.g.floaterm_height       = 0.8
 vim.g.floaterm_borderchars  = '─│─│╭╮╯╰'
 
 -- https://github.com/folke/tokyonight.nvim
-vim.cmd[[colorscheme tokyonight-night]]
+-- vim.cmd[[colorscheme tokyonight-night]]
 -- vim.cmd[[colorscheme tokyonight-storm]]
 -- vim.cmd[[colorscheme tokyonight-moon]]
--- vim.cmd[[colorscheme tokyonight-day]]
+vim.cmd[[colorscheme tokyonight-day]]
 -- colorscheme tokyonight-moon
 -- vim.cmd[[colorscheme tokyonight-storm]]
 -- vim.cmd[[colorscheme nightfox]]
@@ -149,7 +140,6 @@ vim.keymap.set("n", "<leader>k", function() vim.lsp.buf.hover() end)
 vim.api.nvim_set_keymap('n', '<leader>dp', '<cmd>lua vim.diagnostic.goto_prev()<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>dn', '<cmd>lua vim.diagnostic.goto_next()<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>dd', '<cmd>Telescope diagnostics<CR>', { noremap = true, silent = true })
-
 
 -- https://stackoverflow.com/questions/77466697/how-to-automatically-format-on-save
 vim.api.nvim_create_augroup("AutoFormat", {})

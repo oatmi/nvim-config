@@ -4,3 +4,5 @@ require("bufferline").setup{
         separator_style = "slope",
     }
 }
+
+vim.cmd[[colorscheme tokyonight-day]]

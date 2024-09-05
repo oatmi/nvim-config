@@ -25,7 +25,7 @@ require("nvim-tree").setup({
     renderer = {
         group_empty = true,
         indent_width = 2,
-        highlight_opened_files = "icon",
+        highlight_opened_files = "all",
         indent_markers = {
             enable = true,
             inline_arrows = true,
@@ -53,6 +53,9 @@ require("nvim-tree").setup({
             --     },
             -- },
         },
+    },
+    update_focused_file = {
+        enable = true,
     },
     filters = {
         dotfiles = false,

@@ -1,3 +1,4 @@
+local vim=vim
 ---------------------------------- lazy start ------------------------------------
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -56,13 +57,35 @@ require("lazy").setup({
     {'nvim-lualine/lualine.nvim'},
     {"EdenEast/nightfox.nvim" },
     {"nvim-treesitter/nvim-treesitter-context"},
+    -- {
+    --     "lukas-reineke/indent-blankline.nvim",
+    --     main = "ibl",
+    --     ---@module "ibl"
+    --     ---@type ibl.config
+    --     opts = {},
+    -- },
     {
-        "lukas-reineke/indent-blankline.nvim",
-        main = "ibl",
-        ---@module "ibl"
-        ---@type ibl.config
-        opts = {},
-    }
+        "shellRaining/hlchunk.nvim",
+        event = { "BufReadPre", "BufNewFile" },
+        config = function()
+            require("hlchunk").setup({
+                chunk = {
+                    enable = false
+                    -- ...
+                },
+                indent = {
+                    enable = true,
+                    chars = {
+                        "│",
+                        -- "¦",
+                        -- "┆",
+                        -- "┊",
+                    },
+                    -- ...
+                }
+            })
+        end
+    },
 })
 
 ---------------------------------- lazy end ------------------------------------

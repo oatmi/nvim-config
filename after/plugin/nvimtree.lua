@@ -31,12 +31,12 @@ require("nvim-tree").setup({
             inline_arrows = true,
         },
         icons = {
-            -- show = {
+            show = {
             --     file = false,
             --     folder = false,
             --     folder_arrow = true,
-            --     git = true,
-            -- },
+                git = false,
+            },
             -- glyphs = {
             --     folder = {
             --         arrow_closed = "⏵",

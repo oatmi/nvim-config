@@ -106,6 +106,40 @@ require("lazy").setup({
   --   version = '^5', -- Recommended
   --   lazy = false, -- This plugin is already lazy
   -- }
+    {
+        "apple/pkl-neovim",
+        lazy = true,
+        ft = "pkl",
+        dependencies = {
+            {
+                "nvim-treesitter/nvim-treesitter",
+                build = function(_)
+                    vim.cmd("TSUpdate")
+                end,
+            },
+            "L3MON4D3/LuaSnip",
+        },
+        build = function()
+            require('pkl-neovim.internal').init()
+
+            -- Set up syntax highlighting.
+            vim.cmd("TSInstall! pkl")
+        end,
+        config = function()
+            -- Set up snippets.
+            require("luasnip.loaders.from_snipmate").lazy_load()
+        end,
+    },
+    {
+        "shaunsingh/nord.nvim"
+    },
+    {
+        "ggandor/leap.nvim",
+        config = function()
+            require('leap').create_default_mappings()
+        end,
+    }
+
 })
 
 ---------------------------------- lazy end ------------------------------------
@@ -166,9 +200,10 @@ vim.g.floaterm_borderchars  = '─│─│╭╮╯╰'
 
 -- https://github.com/folke/tokyonight.nvim
 -- vim.cmd[[colorscheme tokyonight-night]]
+vim.cmd[[colorscheme nord]]
 -- vim.cmd[[colorscheme tokyonight-storm]]
 -- vim.cmd[[colorscheme tokyonight-moon]]
-vim.cmd[[colorscheme tokyonight-day]]
+-- vim.cmd[[colorscheme tokyonight-day]]
 -- colorscheme tokyonight-moon
 -- vim.cmd[[colorscheme tokyonight-storm]]
 -- vim.cmd[[colorscheme nightfox]]

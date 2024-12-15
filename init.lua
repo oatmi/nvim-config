@@ -64,28 +64,48 @@ require("lazy").setup({
     --     ---@type ibl.config
     --     opts = {},
     -- },
-    {
-        "shellRaining/hlchunk.nvim",
-        event = { "BufReadPre", "BufNewFile" },
-        config = function()
-            require("hlchunk").setup({
-                chunk = {
-                    enable = false
-                    -- ...
-                },
-                indent = {
-                    enable = true,
-                    chars = {
-                        "│",
-                        -- "¦",
-                        -- "┆",
-                        -- "┊",
-                    },
-                    -- ...
-                }
-            })
-        end
+    -- {
+    --     "shellRaining/hlchunk.nvim",
+    --     event = { "BufReadPre", "BufNewFile" },
+    --     config = function()
+    --         require("hlchunk").setup({
+    --             chunk = {
+    --                 enable = false
+    --                 -- ...
+    --             },
+    --             indent = {
+    --                 enable = true,
+    --                 chars = {
+    --                     "│",
+    --                     -- "¦",
+    --                     -- "┆",
+    --                     -- "┊",
+    --                 },
+    --                 -- ...
+    --             }
+    --         })
+    --     end
+    -- },
+   {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = {
+      -- add any options here
     },
+    dependencies = {
+      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+      "MunifTanjim/nui.nvim",
+      -- OPTIONAL:
+      --   `nvim-notify` is only needed, if you want to use the notification view.
+      --   If not available, we use `mini` as the fallback
+      "rcarriga/nvim-notify",
+      }
+  },
+  -- {
+  --   'mrcjkb/rustaceanvim',
+  --   version = '^5', -- Recommended
+  --   lazy = false, -- This plugin is already lazy
+  -- }
 })
 
 ---------------------------------- lazy end ------------------------------------

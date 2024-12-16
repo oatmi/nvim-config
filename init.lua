@@ -91,6 +91,10 @@ require("lazy").setup({
     event = "VeryLazy",
     opts = {
       -- add any options here
+      messages = { view = "mini", view_warn = "mini" },
+      routes = {
+        { filter = { event = "notify", find = "No information available" }, opts = { skip = true } },
+      },
     },
     dependencies = {
       -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
@@ -232,3 +236,6 @@ vim.api.nvim_create_autocmd(
         end,
     }
 )
+
+vim.keymap.set({'n', 'x', 'o'}, 'f',  '<Plug>(leap-forward-to)')
+vim.keymap.set({'n', 'x', 'o'}, 'F',  '<Plug>(leap-backward-to)')

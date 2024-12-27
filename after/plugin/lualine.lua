@@ -28,9 +28,10 @@ require('lualine').setup {
     -- https://github.com/nvim-lualine/lualine.nvim
     sections = {
         lualine_a = {'mode'},
-        lualine_b = {'diff', 'diagnostics'},
+        lualine_b = {'branch', 'diagnostics'},
         lualine_c = {
-            { 'filename', path = 1 },
+            -- { 'filename', path = 1 },
+            'diff',
             'progress',
         },
         lualine_x = {},

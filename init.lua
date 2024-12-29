@@ -43,6 +43,7 @@ require("lazy").setup({
     {'neovim/nvim-lspconfig'},
     {'hrsh7th/cmp-nvim-lsp'},
     {'hrsh7th/nvim-cmp'},
+    {'hrsh7th/cmp-path'},
     {'L3MON4D3/LuaSnip'},
     { 'preservim/tagbar' },
     { 'f-person/git-blame.nvim' },
@@ -57,6 +58,16 @@ require("lazy").setup({
     {'nvim-lualine/lualine.nvim'},
     {"EdenEast/nightfox.nvim" },
     {"nvim-treesitter/nvim-treesitter-context"},
+    {
+        "OXY2DEV/markview.nvim",
+        lazy = false,      -- Recommended
+        -- ft = "markdown" -- If you decide to lazy-load anyway
+
+        dependencies = {
+            "nvim-treesitter/nvim-treesitter",
+            "nvim-tree/nvim-web-devicons"
+        }
+    },
     -- {
     --     "lukas-reineke/indent-blankline.nvim",
     --     main = "ibl",

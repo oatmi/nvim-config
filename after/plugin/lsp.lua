@@ -18,12 +18,12 @@ require('mason-lspconfig').setup({
 require('lspconfig').rust_analyzer.setup({})
 require('lspconfig').gopls.setup({})
 
-local cmp = require('cmp')
+local cmp        = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
 
 cmp.setup({
   window = {
-      completion = cmp.config.window.bordered(),
+      completion    = cmp.config.window.bordered(),
       documentation = cmp.config.window.bordered(),
   },
   mapping = cmp.mapping.preset.insert({
@@ -42,6 +42,8 @@ cmp.setup({
     ['<C-d>'] = cmp.mapping.scroll_docs(4),
   }),
   sources = cmp.config.sources({
-    { name = 'path' }
+    { name = 'nvim_lsp' }, -- 语言服务器补全
+    { name = 'buffer' },   -- 缓冲区补全
+    { name = 'path' },     -- 文件路径补全
   })
 })
